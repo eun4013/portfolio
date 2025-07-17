@@ -52,6 +52,13 @@ h4 {
   }
 }
 
+#about-me,
+#portfolio,
+#design,
+#contact {
+  scroll-margin-top: 100px;
+}
+
 /* 헤더 */
 header {
   width: 100%;
@@ -426,7 +433,7 @@ section .design{
   text-align: center;
   user-select: none;
 
-  display: none;
+  /* display: none; */
 }
 
 section .design h2{
@@ -434,11 +441,40 @@ section .design h2{
 }
 section .design .designSwiper .swiper-wrapper .swiper-slide{
   height: 500px;
+  border-radius: 10px;
   background-color: cadetblue;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  margin: 0px 50px;
+}
 
+/* 호버 시 효과 */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+}
 
+/* 기본 Swiper 버튼 스타일 제거 (필수!) */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev i,
+.swiper-button-next i {
+  color: white;
+  font-size: 50px;
+  pointer-events: none; /* 클릭 이벤트가 부모 div에만 가도록 */
+}
 
 
 /* 푸터 footer */

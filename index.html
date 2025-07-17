@@ -41,10 +41,10 @@
       <div class="head-menu">
         <h4>Eunah's Portfolio</h4>
         <ul class="gnb">
-          <li>About Me</li>
-          <li>Portfolio</li>
-          <li>Design</li>
-          <li>Contact</li>
+          <li data-target="about-me">About Me</li>
+          <li data-target="portfolio">Portfolio</li>
+          <li data-target="design">Design</li>
+          <li data-target="contact">Contact</li>
         </ul>
       </div>
     </header>
@@ -79,10 +79,13 @@
         </div>
       </div>
 
-      <div class="about-me">
+      <div class="about-me" id="about-me">
         <div class="profile">
           <div class="idpoto">
-            <img src="images//KakaoTalk_20250710_115016686.png" alt="kimeunah" />
+            <img
+              src="images//KakaoTalk_20250710_115016686.png"
+              alt="kimeunah"
+            />
           </div>
           <ul class="profile-txt">
             <li><span>Name : </span>김은아 / Kim EunAh</li>
@@ -148,7 +151,7 @@
         </div>
       </div>
 
-      <div class="portfolio">
+      <div class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <ul class="tab-menu">
           <li class="active">LUSH</li>
@@ -344,7 +347,7 @@
         </ul>
       </div>
 
-      <div class="design">
+      <div class="design" id="design">
         <h2>Design</h2>
         <div class="swiper designSwiper">
           <div class="swiper-wrapper">
@@ -358,13 +361,17 @@
             <div class="swiper-slide">Slide 8</div>
             <div class="swiper-slide">Slide 9</div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-prev">
+  <i class="fa-solid fa-chevron-left"></i>
+</div>
+<div class="swiper-button-next">
+  <i class="fa-solid fa-chevron-right"></i>
+</div>
         </div>
       </div>
     </section>
     <footer>
-      <div class="contact">
+      <div class="contact" id="contact">
         <h4>Contact</h4>
         <h2>k4e0a13510@naver.com</h2>
         <p>
@@ -397,34 +404,47 @@
         },
       });
 
-      document.addEventListener('DOMContentLoaded', function () {
-    const openButtons = document.querySelectorAll('.viewmodal a[data-target]');
-    const modals = document.querySelectorAll('.modal');
+      document.addEventListener("DOMContentLoaded", function () {
+        const openButtons = document.querySelectorAll(
+          ".viewmodal a[data-target]"
+        );
+        const modals = document.querySelectorAll(".modal");
 
-    openButtons.forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.dataset.target;
-        const targetModal = document.getElementById(targetId);
-        if (targetModal) {
-          targetModal.style.display = 'block';
-        }
-      });
-    });
+        openButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.dataset.target;
+            const targetModal = document.getElementById(targetId);
+            if (targetModal) {
+              targetModal.style.display = "block";
+            }
+          });
+        });
 
-    modals.forEach(modal => {
-      const closeBtn = modal.querySelector('.close');
-      closeBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
+        modals.forEach((modal) => {
+          const closeBtn = modal.querySelector(".close");
+          closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+          });
+
+          window.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        });
       });
 
-      window.addEventListener('click', function (e) {
-        if (e.target === modal) {
-          modal.style.display = 'none';
-        }
+      document.querySelectorAll(".gnb li").forEach((item) => {
+        item.addEventListener("click", () => {
+          const targetId = item.getAttribute("data-target");
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
       });
-    });
-  });
     </script>
   </body>
 </html>

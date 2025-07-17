@@ -15,22 +15,25 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3e2532440e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+      $(document).ready(function () {
+        $(".tab-menu > li").click(function () {
+          let pofol = $(this).index();
 
- $(document).ready(function(){
-    $(".tab-menu > li").click(function(){
-      let pofol = $(this).index();
+          // 해당 index에 맞는 view-menu 보여주기
+          $(".view-menu > li").hide();
+          $(".view-menu > li").eq(pofol).show();
 
-      // 해당 index에 맞는 view-menu 보여주기
-      $(".view-menu > li").hide();
-      $(".view-menu > li").eq(pofol).show();
-
-      // 탭 메뉴 active 클래스 변경
-      $(".tab-menu > li").removeClass("active");
-      $(this).addClass("active");
-    });
-  });
+          // 탭 메뉴 active 클래스 변경
+          $(".tab-menu > li").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
     </script>
   </head>
   <body>
@@ -79,7 +82,7 @@
       <div class="about-me">
         <div class="profile">
           <div class="idpoto">
-            <img src="images/KakaoTalk_20250716_101320901.png" alt="kimeunah" />
+            <img src="images//KakaoTalk_20250710_115016686.png" alt="kimeunah" />
           </div>
           <ul class="profile-txt">
             <li><span>Name : </span>김은아 / Kim EunAh</li>
@@ -156,28 +159,188 @@
           <li>Dongbang</li>
         </ul>
         <ul class="view-menu">
-          <li><a href=" https://eun4013.github.io/LUSH/"  target="_blank" rel="noopener noreferrer">
-            <div class="pofol-txt">
-              <h3>Lush</h3>
-              
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 07.07 ~ 2025. 07. 14</p>
+                <h2>Lush</h2>
+                <p>페이지 리뉴얼</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  photoshop, html5, css3, jquery, javascript, swiper
+                </p>
+                <div class="go-plan viewmodal">
+                  <a href="#" data-target="modal-lush">
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="pofol-img">
+                <a href="https://eun4013.github.io/vans/" target="_blank">
+                  <img src="images/pofol_01.png" alt="Lush" />
+                </a>
+              </div>
             </div>
-            <div class="pofol-img"><img src="" alt="Lush"></div>
-          </a></li>
-          <li><a href="https://eun4013.github.io/vans/"  target="_blank" rel="noopener noreferrer">
-            VANS
-          </a></li>
-          <li><a href="https://eun4013.github.io/moonWall/"  target="_blank" rel="noopener noreferrer">
-            Moon Wall
-          </a></li>
-          <li><a href="https://eun4013.github.io/isaac/"  target="_blank" rel="noopener noreferrer">
-            Isaac
-          </a></li>
-          <li><a href="https://eun4013.github.io/amorepacific/"  target="_blank" rel="noopener noreferrer">
-            Amorepacific
-          </a></li>
-          <li><a href="https://eun4013.github.io/dongbang/"  target="_blank" rel="noopener noreferrer">
-            Dongbang
-          </a></li>
+          </li>
+          <div class="modal" id="modal-lush">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img
+                src="images/screencapture-figma-design-gFwRRirn7Xo0276GM3nFeJ-2025-07-17-14_45_25.png"
+                alt="Lush 기획서"
+              />
+            </div>
+          </div>
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 06. 24 ~ 2025. 06. 27</p>
+                <h2>VANS</h2>
+                <p>페이지 리뉴얼</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  photoshop, html5, css3, jquery, javascript, swiper
+                </p>
+                <div class="go-plan viewmodal">
+                  <a href="#" data-target="modal-vans">
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="pofol-img">
+                <a href="https://eun4013.github.io/vans/" target="_blank">
+                  <img src="images/pofol_02.png" alt="VANS" />
+                </a>
+              </div>
+            </div>
+          </li>
+          <div class="modal" id="modal-vans">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img src="images/vans.jpg" alt="VANS 기획서" />
+            </div>
+          </div>
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 06. 10 ~ 2025. 06. 23</p>
+                <h2>Moon Wall</h2>
+                <p>무인카페 창업페이지 제작</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  figma, html5, css3, jquery, javascript, swiper
+                </p>
+                <div class="go-plan">
+                  <a
+                    href="images/moonwall.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="pofol-img">
+                <a
+                  href="https://eun4013.github.io/moonWall/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/pofol_03.png" alt="Moon Wall" />
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 05. 28 ~ 2025. 06. 02</p>
+                <h2>Isaac</h2>
+                <p>클론코딩</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  figma, html5, css3, jquery, javascript, swiper
+                </p>
+                <!-- <div class="go-plan">
+                  <a href="#">
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div> -->
+              </div>
+              <div class="pofol-img">
+                <a
+                  href="https://eun4013.github.io/isaac/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/pofol_04.png" alt="Isaac" />
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 05. 21 ~ 2025. 05. 27</p>
+                <h2>Amorepacific</h2>
+                <p>클론코딩</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  html5, css3, jquery
+                </p>
+                <!-- <div class="go-plan">
+                  <a href="#">
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div> -->
+              </div>
+              <div class="pofol-img">
+                <a
+                  href="https://eun4013.github.io/amorepacific/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/pofol_05.png" alt="Amorepacific" />
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="content">
+              <div class="pofol-txt">
+                <p class="clare-date">2025. 05. 15 ~ 2025. 05. 21</p>
+                <h2>Dongbang</h2>
+                <p>클론코딩</p>
+                <p class="use-tool">
+                  <span>사용프로그램</span>
+                  html5, css3, jquery
+                </p>
+                <!-- <div class="go-plan">
+                  <a href="#">
+                    기획서
+                    <i class="fa-solid fa-angles-right"></i>
+                  </a>
+                </div> -->
+              </div>
+              <div class="pofol-img">
+                <a
+                  href="https://eun4013.github.io/dongbang/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="images/pofol_06.png" alt="Dongbang" />
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
 
@@ -233,6 +396,35 @@
           prevEl: ".swiper-button-prev",
         },
       });
+
+      document.addEventListener('DOMContentLoaded', function () {
+    const openButtons = document.querySelectorAll('.viewmodal a[data-target]');
+    const modals = document.querySelectorAll('.modal');
+
+    openButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.dataset.target;
+        const targetModal = document.getElementById(targetId);
+        if (targetModal) {
+          targetModal.style.display = 'block';
+        }
+      });
+    });
+
+    modals.forEach(modal => {
+      const closeBtn = modal.querySelector('.close');
+      closeBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  });
     </script>
   </body>
 </html>

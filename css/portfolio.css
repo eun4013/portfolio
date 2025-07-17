@@ -1,0 +1,378 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  
+}
+h1 {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 108px;
+  user-select: none;
+}
+h2 {
+  font-size: 54px;
+}
+h3 {
+  font-size: 38px;
+  user-select: none;
+}
+h4 {
+  font-size: 24px;
+  user-select: none;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.822);
+  line-height: 90px;
+  backdrop-filter: blur(5px);
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  user-select: none;
+}
+header .head-menu {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+header .head-menu .gnb {
+  width: 500px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+header .head-menu .gnb li {
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+header .head-menu .gnb li::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform-origin: left center;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+header .head-menu .gnb li::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 70px;
+  right: 50%;
+  transform-origin: right center;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+header .head-menu .gnb li:hover::after,
+header .head-menu .gnb li:hover::before {
+  transform: scale(1);
+}
+
+/* 섹션 */
+/* 메인 main */
+section .main {
+  width: 100%;
+  height: 900px;
+  background-color: rgb(213, 224, 236);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  /* color: #fff; */
+}
+
+section .main .main-tit {
+  /* border: 1px solid red; */
+  width: 950px;
+  height: 400px;
+  margin-left: 150px;
+  padding-top: 230px;
+}
+section .main .main-tit .sub-tit > p {
+  font-size: 48px;
+  font-weight: 700;
+  padding-left: 9px;
+  user-select: none;
+}
+section .main .main-tit .contactme {
+  opacity: 0.5;
+  padding-left: 9px;
+}
+
+section .main .sub-txt-wrap {
+  position: absolute;
+  top: 50%;
+  right: -300px;
+  transform: translateY(-50%) rotate(90deg);
+  height: 50px;
+  width: 100vh;
+  white-space: nowrap;
+  /* border: 1px solid red; */
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+  user-select: none;
+}
+
+section .main .sub-txt-track {
+  display: inline-block;
+  animation: scrollText 20s linear infinite;
+}
+
+section .main .sub-txt-track p {
+  display: inline-block;
+  padding-right: 100px; /* 여백을 줘야 반복이 부드러움 */
+  font-size: 28px;
+  line-height: 50px;
+}
+
+/* 자기소개 about-me */
+section .about-me {
+  width: 1400px;
+  margin: 150px auto;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+section .about-me .profile {
+  width: 400px;
+}
+section .about-me .profile .idpoto {
+  width: 250px;
+  height: 300px;
+  /* height: 300px; */
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0px auto;
+}
+section .about-me .profile .idpoto img {
+  width: 250px;
+}
+
+section .about-me .profile .profile-txt {
+  width: 100%;
+  margin: 35px auto;
+}
+section .about-me .profile .profile-txt li {
+  width: 350px;
+  display: flex;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+section .about-me .profile .profile-txt li span {
+  display: block;
+  width: 150px;
+  font-weight: 600;
+  user-select: none;
+}
+
+section .about-me .history {
+  /* border: 1px solid red; */
+  width: 850px;
+  /* margin-top: 50px; */
+  user-select: none;
+}
+section .about-me .history h3 {
+  width: 100%;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding-left: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+section .about-me .history .history-txt{
+  font-size: 18px;
+}
+section .about-me .history .history-txt li{
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  display: flex;
+  margin-top: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+section .about-me .history .history-txt li span{
+  width: 250px;
+  font-weight: 600;
+}
+
+/* 기술 skill */
+section .skill{
+  text-align: center;
+  user-select: none;
+}
+
+/* 포트폴리오 portfolio */
+section .portfolio{
+  width: 100%;
+  height: 700px;
+  /* background-color: beige; */
+  margin-top: 150px;
+  padding-bottom: 150px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  /* border: 1px solid red; */
+  user-select: none;
+}
+
+section .portfolio::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(213, 224, 236, 0.24);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section .portfolio .tab-menu{
+  display: flex;
+  width: 850px;
+  justify-content: space-between;
+  margin: 40px auto;
+  font-size: 18px;
+}
+section .portfolio .tab-menu li{
+  width: 130px;
+  text-align: center;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  padding: 8px 0;
+}
+section .portfolio .tab-menu li.active, 
+section .portfolio .tab-menu li:hover{
+  background-color: rgb(213, 224, 236);
+  border-radius: 50px;
+  padding: 8px 0;
+  font-weight: 700;
+}
+
+section .portfolio .view-menu{
+  width: 1400px;
+  height: 500px;
+  /* border: 1px solid red; */
+  margin:  0 auto;
+  position: relative;
+}
+section .portfolio .view-menu li{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 5px 5px 10px #0000003a;
+  border-radius: 10px;
+  margin-top: 20px;
+
+  display: none;
+}
+section .portfolio .view-menu li:nth-child(1){
+  display: block;
+}
+
+
+
+/* 기타 디자인 design */
+section .design{
+  width: 100%;
+  height: 600px;
+  background-color: rgba(213, 224, 236, 0.24);;
+  text-align: center;
+  user-select: none;
+}
+
+section .design h2{
+  margin-bottom: 50px;
+}
+section .design .designSwiper .swiper-wrapper .swiper-slide{
+  height: 400px;
+  background-color: cadetblue;
+}
+
+
+
+
+
+/* 푸터 footer */
+
+footer{
+  width: 100%;
+  height: 350px;
+  background-color: rgb(213, 224, 236);
+  /* background-color: #2b3358; */
+  /* color: #fff; */
+}
+footer .contact{
+  max-width: 1400px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /* border: 1px solid red; */
+  padding-top: 60px;
+}
+footer .contact h2{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+footer .contact p{
+  opacity: 0.5;
+  user-select: none;
+}

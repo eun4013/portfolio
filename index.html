@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KimEunAh-Portfolio</title>
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+ $(document).ready(function(){
+    $(".tab-menu > li").click(function(){
+      let pofol = $(this).index();
+
+      // 해당 index에 맞는 view-menu 보여주기
+      $(".view-menu > li").hide();
+      $(".view-menu > li").eq(pofol).show();
+
+      // 탭 메뉴 active 클래스 변경
+      $(".tab-menu > li").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="head-menu">
+        <h4>Eunah's Portfolio</h4>
+        <ul class="gnb">
+          <li>About Me</li>
+          <li>Portfolio</li>
+          <li>Design</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <div class="main">
+        <div class="main-tit">
+          <h1>
+            WEB PUBLISHER
+            <br />
+            PORTFOLIO
+          </h1>
+          <div class="sub-tit">
+            <p>Kim EunAh</p>
+
+            <div class="contactme">
+              <p>+82 10-5467-4136</p>
+              <p>k4e0a13510@naver.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="sub-txt-wrap">
+          <div class="sub-txt-track">
+            <p>
+              Creative Designer 　|　 Web Publisher 　|　 Visual to Code 　|　
+              UI/UX Thinking 　|　 Made by Kim Eunah
+            </p>
+            <p>
+              Creative Designer 　|　 Web Publisher 　|　 Visual to Code 　|　
+              UI/UX Thinking 　|　 Made by Kim Eunah
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-me">
+        <div class="profile">
+          <div class="idpoto">
+            <img src="images/KakaoTalk_20250716_101320901.png" alt="kimeunah" />
+          </div>
+          <ul class="profile-txt">
+            <li><span>Name : </span>김은아 / Kim EunAh</li>
+            <li><span>Date Of Birth : </span>1999. 03. 05</li>
+            <li><span>Tell : </span>010-5467-4136</li>
+            <li><span>E-mail : </span>k4e0a13510@naver.com</li>
+            <li><span>Mbti : </span>INFP</li>
+          </ul>
+        </div>
+        <div class="history">
+          <h3>경력사항</h3>
+          <ul class="history-txt">
+            <li><span>2022. 02 </span>목원대학교 미술학부 서양화과 졸업</li>
+            <li>
+              <span>2022. 06 ~ 2022. 09 </span>디자인,영상콘텐츠 제작인력
+              양성과정 수료
+            </li>
+            <li>
+              <span>2022. 10 ~ 2024. 05 </span>
+              태범글라스텍 디자인마케팅팀 근무
+            </li>
+            <li><span>2024. 07 ~ </span>뚜레쥬르 근무</li>
+            <li><span>2025. 02 ~ </span>2종 운전면허</li>
+            <li>
+              <span>2025. 03 ~ </span>
+              생성형 AI 활용 UIUX웹디자인&웹퍼블리셔 개발과정 수강 중
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="swiper skillSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/about_img_01.svg" alt="html5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_02.svg" alt="css3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_03.svg" alt="js" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_04.svg" alt="figma" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_05.svg" alt="Photoshop" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_06.svg" alt="Illustrator" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_07.svg" alt="Jquery" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_08.svg" alt="GitHub" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/about_img_09.svg" alt="VScode" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio">
+        <h2>Portfolio</h2>
+        <ul class="tab-menu">
+          <li class="active">LUSH</li>
+          <li>VANS</li>
+          <li>Moon Wall</li>
+          <li>Isaac</li>
+          <li>Amorepacific</li>
+          <li>Dongbang</li>
+        </ul>
+        <ul class="view-menu">
+          <li><a href=" https://eun4013.github.io/LUSH/"  target="_blank" rel="noopener noreferrer">
+            <div class="pofol-txt">
+              <h3>Lush</h3>
+              
+            </div>
+            <div class="pofol-img"><img src="" alt="Lush"></div>
+          </a></li>
+          <li><a href="https://eun4013.github.io/vans/"  target="_blank" rel="noopener noreferrer">
+            VANS
+          </a></li>
+          <li><a href="https://eun4013.github.io/moonWall/"  target="_blank" rel="noopener noreferrer">
+            Moon Wall
+          </a></li>
+          <li><a href="https://eun4013.github.io/isaac/"  target="_blank" rel="noopener noreferrer">
+            Isaac
+          </a></li>
+          <li><a href="https://eun4013.github.io/amorepacific/"  target="_blank" rel="noopener noreferrer">
+            Amorepacific
+          </a></li>
+          <li><a href="https://eun4013.github.io/dongbang/"  target="_blank" rel="noopener noreferrer">
+            Dongbang
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="design">
+        <h2>Design</h2>
+        <div class="swiper designSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="contact">
+        <h4>Contact</h4>
+        <h2>k4e0a13510@naver.com</h2>
+        <p>
+          본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로
+          제작되었습니다.
+        </p>
+        <p>© 2025 Kim Eun-Ah</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".skillSwiper", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+      var swiper = new Swiper(".designSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

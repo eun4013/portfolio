@@ -729,20 +729,18 @@ section .portfolio .view-menu li .content .pofol-txt h2{
     margin-top: 15px;
   }
 
-  section .portfolio .view-menu li .content .pofol-img a img {
+  section .portfolio .view-menu li .content .pofol-img  img {
     width: 100%;
     max-width: 300px;
   }
   section .portfolio .view-menu li .content .pofol-txt .go{
     margin: 0 auto;
   }
-section .portfolio .view-menu li .content .pofol-txt .go-web
+section .portfolio .view-menu li .content .pofol-txt .go-web, 
   section .portfolio .view-menu li .content .pofol-txt .go-plan {
-    margin: 30px auto 0;
+    margin: 30px auto;
   }
-section .portfolio .view-menu li .content .pofol-txt .go-web{
-  margin: 0 auto;
-}
+
 }
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/

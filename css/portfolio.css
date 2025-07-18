@@ -735,7 +735,9 @@ section .portfolio .view-menu li .content .pofol-txt h2{
     font-size: 16px;
   }
 
-
+header .head-menu h4{
+  display: none;
+}
   header .head-menu .gnb {
     width: 220px;
   }
@@ -912,17 +914,17 @@ section .portfolio .tab-menu li:hover{
   }
 
   footer{
-    height: 300px;
+    height: 250px;
   }
   footer .contact{
     padding-top: 70px;
   }
     footer .contact h2 {
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 20px;
   }
     footer .contact p {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.6;
     letter-spacing: -1px;
   }

@@ -722,7 +722,7 @@ section .portfolio .view-menu li .content .pofol-txt h2{
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
  h1 {
-    font-size: 68px;
+    font-size: 60px;
   }
   h2 {
     font-size: 38px;
@@ -760,14 +760,14 @@ section .portfolio .view-menu li .content .pofol-txt h2{
 
   section .main .main-tit {
     /* border: 1px solid red; */
-    width: 480px;
+    width: 400px;
     margin: 0 auto;
     padding-top: unset;
   }
 
 
   section .main .main-tit .sub-tit > p {
-    font-size: 32px;
+    font-size: 28px;
     margin-top: 50px;
     margin-bottom: 20px;
   }
@@ -846,7 +846,7 @@ section .portfolio .view-menu li .content .pofol-txt h2{
 
 
 section .portfolio {
-    height: auto;
+    height: 900px;
     padding-bottom: 150px;
     margin-top: 120px;
   }
@@ -872,10 +872,10 @@ section .portfolio .tab-menu li:hover{
   section .portfolio .view-menu {
     width: 95%;
     height: auto;
+    margin: 0 auto;
   }
 
   section .portfolio .view-menu li {
-    position: static;
     height: auto;
     margin-bottom: 40px;
   }
@@ -911,9 +911,14 @@ section .portfolio .tab-menu li:hover{
     margin: 30px auto 0;
   }
 
-
+  footer{
+    height: 300px;
+  }
+  footer .contact{
+    padding-top: 70px;
+  }
     footer .contact h2 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
     footer .contact p {

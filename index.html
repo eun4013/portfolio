@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KimEunAh-Portfolio</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="css/portfolio.css" />
     <link
       rel="stylesheet"
@@ -237,7 +238,7 @@
                 </p>
                 <div class="go-plan">
                   <a
-                    href="images/moonwall.pdf"
+                    href="https://drive.google.com/file/d/1K2h8WR7XXEmIsXjCC9_uAbIIgauK_E3U/preview"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -362,11 +363,11 @@
             <div class="swiper-slide">Slide 9</div>
           </div>
           <div class="swiper-button-prev">
-  <i class="fa-solid fa-chevron-left"></i>
-</div>
-<div class="swiper-button-next">
-  <i class="fa-solid fa-chevron-right"></i>
-</div>
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="swiper-button-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
       </div>
     </section>
@@ -386,25 +387,25 @@
 
     <script>
       var swiper = new Swiper(".skillSwiper", {
-  slidesPerView: 5, // 기본값: PC
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 5, // PC
-    },
-    768: {
-      slidesPerView: 3, // 태블릿
-    },
-    0: {
-      slidesPerView: 1, // 모바일
-    },
-  },
-});
+        slidesPerView: 5, // 기본값: PC
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 5, // PC
+          },
+          768: {
+            slidesPerView: 3, // 태블릿
+          },
+          0: {
+            slidesPerView: 1, // 모바일
+          },
+        },
+      });
 
       document.addEventListener("DOMContentLoaded", function () {
         const openButtons = document.querySelectorAll(

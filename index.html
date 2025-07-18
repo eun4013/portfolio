@@ -43,7 +43,7 @@
         <ul class="gnb">
           <li data-target="about-me">About Me</li>
           <li data-target="portfolio">Portfolio</li>
-          <li data-target="design">Design</li>
+          <!-- <li data-target="design">Design</li> -->
           <li data-target="contact">Contact</li>
         </ul>
       </div>
@@ -386,23 +386,25 @@
 
     <script>
       var swiper = new Swiper(".skillSwiper", {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-      });
-      var swiper = new Swiper(".designSwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+  slidesPerView: 5, // 기본값: PC
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 5, // PC
+    },
+    768: {
+      slidesPerView: 3, // 태블릿
+    },
+    0: {
+      slidesPerView: 1, // 모바일
+    },
+  },
+});
 
       document.addEventListener("DOMContentLoaded", function () {
         const openButtons = document.querySelectorAll(

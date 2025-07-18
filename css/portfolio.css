@@ -56,6 +56,15 @@ h4 {
   }
 }
 
+@keyframes shakeX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
 #about-me,
 #portfolio,
 #design,
@@ -395,6 +404,12 @@ section .portfolio .view-menu li .content .pofol-txt{
   /* border: 1px solid red; */
   text-align: left;
 }
+section .portfolio .view-menu li .content .pofol-txt .go{
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
 section .portfolio .view-menu li .content .pofol-txt .clare-date{
   opacity: 0.7;
 }
@@ -406,6 +421,7 @@ section .portfolio .view-menu li .content .pofol-txt .use-tool span{
   font-size: 18px;
   font-weight: 700;
 }
+section .portfolio .view-menu li .content .pofol-txt .go-web, 
 section .portfolio .view-menu li .content .pofol-txt .go-plan{
   margin-top: 50px;
   width: 120px;
@@ -417,24 +433,26 @@ section .portfolio .view-menu li .content .pofol-txt .go-plan{
   border-radius: 5px;
   cursor: pointer;
 }
+section .portfolio .view-menu li .content .pofol-txt .go-web a,
 section .portfolio .view-menu li .content .pofol-txt .go-plan a{
   display: block;
   width: 100%;
   height: 100%;
   height: 40px;
 }
-
+/* section .portfolio .view-menu li .content .pofol-txt .go-web a i, 
 section .portfolio .view-menu li .content .pofol-txt .go-plan a i{
   transition: transform 0.3s ease;
-}
+} */
+section .portfolio .view-menu li .content .pofol-txt .go-web:hover a i, 
 section .portfolio .view-menu li .content .pofol-txt .go-plan:hover a i{
-  transform: translateX(5px)
+  animation: shakeX 0.5s ease infinite;
 }
 
 section .portfolio .view-menu li .content .pofol-img{
   margin-top: 30px;
 }
-section .portfolio .view-menu li .content .pofol-img a img{
+section .portfolio .view-menu li .content .pofol-img img{
   width: 500px;
 }
 
@@ -686,7 +704,7 @@ footer .contact p{
 
   section .portfolio .view-menu li {
     position: static;
-    height: 600px;
+    height: auto;
     margin-bottom: 30px;
   }
 
@@ -715,11 +733,16 @@ section .portfolio .view-menu li .content .pofol-txt h2{
     width: 100%;
     max-width: 300px;
   }
-
+  section .portfolio .view-menu li .content .pofol-txt .go{
+    margin: 0 auto;
+  }
+section .portfolio .view-menu li .content .pofol-txt .go-web
   section .portfolio .view-menu li .content .pofol-txt .go-plan {
     margin: 30px auto 0;
   }
-
+section .portfolio .view-menu li .content .pofol-txt .go-web{
+  margin: 0 auto;
+}
 }
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
@@ -907,11 +930,13 @@ section .portfolio .tab-menu li:hover{
     margin-top: 20px;
   }
 
-  section .portfolio .view-menu li .content .pofol-img a img {
-    width: 100%;
-    max-width: 450px;
+  section .portfolio .view-menu li .content .pofol-img img {
+    max-width: 350px;
   }
-
+  section .portfolio .view-menu li .content .pofol-txt .go{
+    margin: 0 auto;
+  }
+section .portfolio .view-menu li .content .pofol-txt .go-web, 
   section .portfolio .view-menu li .content .pofol-txt .go-plan {
     margin: 30px auto 0;
   }

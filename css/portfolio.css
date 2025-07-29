@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
 ul {
   list-style: none;
@@ -20,7 +21,7 @@ body {
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  
+  cursor: url('../images/favicon.svg'), auto;
 }
 h1 {
   font-family: "Noto Serif", serif;
@@ -450,6 +451,7 @@ section .portfolio .view-menu li .content .pofol-txt .go-plan a{
   width: 100%;
   height: 100%;
   height: 40px;
+  cursor: pointer;
 }
 /* section .portfolio .view-menu li .content .pofol-txt .go-web a i, 
 section .portfolio .view-menu li .content .pofol-txt .go-plan a i{

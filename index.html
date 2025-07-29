@@ -40,7 +40,11 @@
   <body>
     <header>
       <div class="head-menu">
-        <h4>Eunah's Portfolio</h4>
+        <div class="logo">
+          <h1><img src="images/favicon.svg" alt=""></h1>
+          <h4>Eunah's Portfolio</h4>
+        </div>
+        
         <ul class="gnb">
           <li data-target="about-me">About Me</li>
           <li data-target="portfolio">Portfolio</li>
@@ -461,6 +465,13 @@
           }
         });
       });
+
+      document.querySelector('.logo').addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // 부드럽게 스크롤됨
+    });
+  });
     </script>
   </body>
 </html>

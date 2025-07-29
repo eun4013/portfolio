@@ -89,12 +89,23 @@ header {
   
 }
 header .head-menu {
-  max-width: 1400px;
+  max-width: 1600px;
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
+header .head-menu .logo{
+  display: flex;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+header .head-menu .logo h1 img{
+  width: 50px;
+  margin-top: 18px;
+  margin-right: 10px;
+}
+
 header .head-menu .gnb {
   width: 500px;
   /* border: 1px solid red; */

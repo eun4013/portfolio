@@ -127,8 +127,8 @@ header .head-menu .gnb li::after {
   content: "";
   display: block;
   width: 40px;
-  height: 1px;
-  background-color: #000;
+  height: 2px;
+  background-color: #bebebe;
   position: absolute;
   top: 70px;
   left: 50%;
@@ -140,8 +140,8 @@ header .head-menu .gnb li::before {
   content: "";
   display: block;
   width: 40px;
-  height: 1px;
-  background-color: #000;
+  height: 2px;
+  background-color: #bebebe;
   position: absolute;
   top: 70px;
   right: 50%;

@@ -23,6 +23,7 @@ body {
   font-style: normal;
   cursor: url('../images/favicon.svg'), auto;
 }
+
 h1 {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
@@ -123,6 +124,10 @@ header .head-menu .gnb li {
   position: relative;
 
   transition: all 0.3s;
+}
+
+header .head-menu .gnb li:hover{
+  font-weight: 700;
 }
 header .head-menu .gnb li::after {
   content: "";
